@@ -41,7 +41,7 @@ public final class Optional<T> {
     /**
      * Common instance for {@code empty()}.
      */
-    private static final Optional<?> EMPTY = new Optional<>();
+    private static final Optional<?> EMPTY = new Optional<Object>();
 
     /**
      * If non-null, the value; if null, indicates no value is present
@@ -94,8 +94,9 @@ public final class Optional<T> {
      * @return an {@code Optional} with the value present
      * @throws NullPointerException if value is null
      */
+    @SuppressWarnings("unchecked")
     public static <T> Optional<T> of(T value) {
-        return new Optional<>(value);
+        return (Optional<T>) new Optional<Object>(value);
     }
 
     /**
@@ -107,8 +108,9 @@ public final class Optional<T> {
      * @return an {@code Optional} with a present value if the specified value
      * is non-null, otherwise an empty {@code Optional}
      */
+    @SuppressWarnings("unchecked")
     public static <T> Optional<T> ofNullable(T value) {
-        return value == null ? empty() : of(value);
+        return value == null ? (Optional<T>) empty() : of(value);
     }
 
     /**

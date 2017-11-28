@@ -22,7 +22,10 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-package java.util;
+package com.naver.java.optionalbp;
+
+import java.util.NoSuchElementException;
+import java.util.Objects;
 
 /**
  * A container object which may or may not contain a non-null value.

@@ -1,4 +1,10 @@
 /*
+ * Copyright 2017 NAVER Corp.
+ * Java 6/7 compatible minimal backport of java.lang.Optional
+ * Original file: http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/07011844584f/src/share/classes/java/util/Optional.java
+*/
+
+/*
  * Copyright (c) 2012, 2013, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
